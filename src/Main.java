@@ -35,5 +35,24 @@ public class Main {
         }
         System.out.println("Минимальная сумма трат за неделю составила " + minimumAmount + " рублей. Максимальная сумма трат за неделю составила " + maximumAmount + " рублей.");
 
+        //task 3
+        System.out.println("Task 3");
+        int monthlyAmountNew3 = 0;
+        float averageAmount = 0;
+        int numberOfWeeks = 0;
+        int[] monthlyPaymentNew3 = new int [5];
+        monthlyPaymentNew3[0] = 200;
+        monthlyPaymentNew3[1] = 250;
+        monthlyPaymentNew3[2] = 100;
+        monthlyPaymentNew3[3] = 180;
+        monthlyPaymentNew3[4] = 240;
+        for(int i = 0; i < monthlyPaymentNew3.length; i++){
+            numberOfWeeks++;
+            monthlyAmountNew3 = monthlyAmountNew3 + monthlyPaymentNew3[i];
+        }
+        averageAmount = monthlyAmountNew3 /numberOfWeeks;
+        System.out.println("Средняя сумма трат за месяц составила " + averageAmount + " рублей");
+
+
     }
 }
