@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         //task 1
@@ -56,11 +58,17 @@ public class Main {
         //task 4
         System.out.println("Task 4");
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        int end = reverseFullName.length-1;
-        for (; end > 0; end--) {
-            System.out.print(reverseFullName[end]);
+        int startPointer = 0;
+        int endPointer = reverseFullName.length-1;
+        for (int i = 0; i < reverseFullName.length/2; i++) {
+            char temporary = reverseFullName[startPointer];
+            reverseFullName[startPointer] = reverseFullName[endPointer];
+            reverseFullName[endPointer] = temporary;
+            startPointer++;
+            endPointer--;
 
         }
+        System.out.print(Arrays.toString(reverseFullName));
 
 
     }
